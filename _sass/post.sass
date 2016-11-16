@@ -1,0 +1,163 @@
+.post-header
+   +display(flex)
+   +justify-content(space-between)
+   width: 100%
+   
+   
+   .post-bluff
+      margin: 0 3px 15px
+
+   .post-seelist
+      a
+         background-color: $body-alt
+         margin-right: 5px
+         padding: 4px 10px
+         border-radius: 3px
+         font-size: .8rem
+         color: white
+
+         &:hover
+            color: $header-color
+         
+   @media (max-width: 650px)
+      +display(block)
+      margin-bottom: 3rem
+
+.post-mainX
+   z-index: 1
+   max-width: 775px
+   +flex(1 1 100%)
+   +display(flex)
+   +justify-content(center)
+   +flex-wrap(wrap)
+
+   .post-item
+      margin: 0 5px 35px
+
+   .post-img
+      +flex(0 0 260px)
+
+      img
+         padding: 0
+         box-shadow: 0px 1px 3px 0 rgba(#000, .5)
+
+      ~ *
+         margin-top: 5px
+
+         h2
+            font-weight: 600
+
+   .post-desc
+      +flex(0 0 220px)
+      padding: 0 8px
+
+   .post-purchase
+      +flex(0 1 265px)
+      height: 345px
+      padding: 25px 15px
+      border: 1px solid $border-color
+      background-color: $body-alt-bottom
+      border-radius: 4px 
+
+      .purchase-top  
+         +display(flex)
+         height: 23px
+         margin-bottom: 35px
+         +justify-content(space-between)
+
+         .price
+            margin: -42px 0 0 0
+            padding: 19px 13px
+            background-color: $body-color
+            border: 1px solid $border-color
+            border-radius: 4px
+
+      p
+         margin-bottom: 20px
+
+      .addtocart
+         margin-top: 35px
+
+   .post-summary
+      +flex(0 1 100%)
+      padding: 0
+
+      .summary
+         max-width: 700px
+         
+   @media (max-width: 992px)
+      .post-item
+         margin-left: 0
+         margin-right: 0
+      
+      .post-img
+         +flex(0 1 400px)
+
+.post-sidebar
+   z-index: 1
+   +flex-grow(1)
+   margin: 5px 5px 0 20px 
+   
+   @media (max-width: 1200px)
+      +display(none)
+
+   .sidebar 
+      overflow-y: hidden
+      padding: 5px 0 5px 5px
+      border-left: 1px solid $border-color
+
+      > *
+         margin: 0         
+         padding: 5px 0 3px 10px
+
+      h2
+         background-color: $body-alt-bottom
+         text-transform: uppercase
+         font:
+            size: 17px
+            weight: 600
+         border:
+            width: 0 0 1px 1px
+            style: solid
+            color: $border-color
+
+      ul
+         list-style-type: none
+         border:
+            width: 0 0 0 1px
+            style: solid
+            color: $border-color
+
+         li
+            margin-top: 3px
+            +position(relative)
+
+            &:before
+               content: ""
+               +position(absolute, 50% null null -10px)
+               +size(5px 1px)
+               background-color: $border-color
+
+            a
+               font-size: 15px
+               padding: 2px 5px
+               border-radius: 2px
+               background-color: rgba($body-color, .7)
+               color: $site-color
+
+               &:hover
+                  background-color: $body-alt-bottom
+
+.post-bg
+   z-index: 0
+   +position(absolute, null 0 0 null)
+
+   &:after
+      content: ""
+      +position(absolute, 0 0 0 0)
+      box-shadow: inset 0 0 30px 15px white
+      background:
+         image: radial-gradient(circle at 75% 70%, transparent, rgba(white, .7) 35%, white 70%)
+
+   img
+      +size(100% auto)

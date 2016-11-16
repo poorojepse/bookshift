@@ -1,0 +1,68 @@
+.site-footer
+   +flex-shrink(0)
+   
+   .footer
+      background-color: $footer-color
+      padding: 20px 15px
+      
+      .flex-footer
+         +display(block)
+            
+         @media (min-width: 600px)
+            +display(flex)
+            +flex-direction(row-reverse)
+            +flex-wrap(wrap-reverse)
+            +justify-content(center)
+            
+         .f-item
+            margin: 0px
+            
+            @media (min-width: 600px)
+               margin: 12px         
+            
+            h2
+               color: #fff
+               font-size: 18px
+               text-transform: uppercase
+               border-bottom: 1px solid $border-color
+               padding-bottom: 8px
+               
+            ul
+               padding-left: 2px
+               list-style-type: none
+
+               a
+                  color: #eee
+                        
+         .f-updates
+            +flex(3 0 350px)
+            +order(3)
+            
+         .f-links
+            +flex(1 0 150px)
+            +order(2)
+            
+            .footer-home, .footer-gallery
+               +display(none)
+                  
+               @media (max-width: 650px)
+                  +display(block)
+               
+         .f-contact
+            +flex(1 0 250px)
+            +order(1)
+               
+         .footer-address
+            color: #eee
+            
+   .copyright
+      padding: 0 15px
+      background-color: darken($footer-color, 17)
+      color: white
+      border-top: 1px solid #494949
+      border-bottom: 1px solid #505050
+      
+      .copyright-text
+         margin: 0
+         font-size: .8rem
+         letter-spacing: .9px

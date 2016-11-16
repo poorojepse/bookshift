@@ -1,0 +1,436 @@
+.page-main
+
+   h2
+      margin-bottom: 8px
+
+   p
+      margin: 0
+      
+   .page-header
+      width: 100%
+
+      .bluff
+         margin-bottom: 20px
+
+      .sub-bluff
+         margin-bottom: 2rem
+         
+   .page-footer
+      .tips
+         font-size: .9rem
+      
+   
+   /* Start of Order Stylesheet */
+   .book-package-list
+      width: 100%
+      border: 1px solid $border-color
+      margin-bottom: 8px
+      
+      tr                    
+         text-align: left
+         
+         th, td
+            padding: 2px 12px
+            
+         th
+            font-size: 16px
+            text-transform: uppercase
+         
+         &:nth-child(odd)
+            background-color: lighten($border-color, 25)
+            
+         &:first-of-type
+            background-color: $body-alt-bottom
+         
+      .header-book-name, .item-book-name
+         min-width: 100px
+         
+      .header-save, .item-save
+         width: 100px
+         text-align: center
+         
+      .header-price, .item-price
+         text-align: center
+         
+      .header-add-to-cart, .item-add-to-cart
+         text-align: center
+         font-size: 10px
+         line-height: 1
+         width: 20px         
+
+      .item-buy
+         padding: 2px 0
+         max-width: 120px
+      
+         a
+            background-color: $header-color
+            color: $site-color
+            text-align: center
+            padding: 2px 10px
+            border-radius: 2px
+            +display(block)
+            
+            &:hover
+               color: darken($site-color, 20)
+         
+            
+      .item-see-all
+         background-color: $body-alt
+         
+         a
+            font-size: .8rem
+               
+            &:hover
+               color: $header-color
+            
+      @media (max-width: 968px)
+         .header-book-author, .item-book-author
+            +display(none)
+   /* End of Order Now Stylesheet */
+   
+   
+   
+         
+   
+   /* Start of Order List Stylesheets */
+   .book-package
+      +justify-content(center)
+      +display(flex)
+      +flex-wrap(wrap)
+      border: 1px solid $border-color
+      padding: 16px 10px
+      border-radius: 3px
+      margin-bottom: 1.5rem
+      
+      > *
+         padding: 4px 8px
+      
+         
+      .book-title
+         margin: 0
+         +flex-grow(0)
+         
+      .book-buy
+         border: 1px solid $border-color
+         color: $site-color
+         +flex-shrink(1)
+         +flex-grow(1)
+         text-align: center
+         border-radius: 2px
+         
+         &:hover
+            background-color: $header-color
+         
+   .book-item-list
+      width: 100%
+      border: 1px solid $border-color
+      margin-bottom: 8px
+      
+      tr                     
+         th, td
+            padding: 2px 10px
+            text-align: left
+            
+         th
+            font-size: 16px
+            text-transform: uppercase
+            
+         
+         &:nth-child(odd)
+            background-color: lighten($border-color, 25)
+            
+         &:first-of-type
+            background-color: $body-alt-bottom
+      
+         .header-book-title, .item-book-title
+            min-width: 200px
+            
+         .header-book-author, .item-book-author
+            ~ *
+               text-align: center
+         
+         .header-add-to-cart, .item-add-to-cart
+            font-size: 10px
+            width: 20px
+            line-height: 1
+      
+         .item-buy
+            padding: 2px 0
+            max-width: 80px
+            
+            a
+               +display(block)
+               color: $site-color
+               background-color: $header-color
+               border-radius: 2px
+               padding: 2px 10px
+         
+               &:hover
+                  color: darken($site-color, 20)
+         
+         .item-see-more
+            width: 50px
+            line-height: 1px
+            background-color: $body-alt
+
+            a
+               text-align: center
+               font-size: .8rem
+               line-height: 1
+               color: white
+               padding: 1px 4px 
+
+               &:hover
+                  color: $header-color  
+               
+         @media (max-width: 992px)
+            .header-language, .header-color, .item-language, .item-color
+               +display(none)
+               
+         @media (max-width: 630px)
+            .header-book-author, .item-book-author
+               +display(none)
+   /* end of Order List Stylesheets */
+   
+   
+      
+      
+   /* Start of Support Stylesheet */
+   .support-form
+      margin: 0 45px
+      
+      form
+
+         .form-text
+            input
+               width: 250px
+            
+         p
+            margin-bottom: 5px
+            
+         input
+            padding: 3px 5px
+            margin-bottom: 2rem
+            
+         textarea
+            margin-bottom: 5px
+            resize: none
+            color: $site-color
+            font-family: $site-font
+            padding: 7px
+            +size(100% 13em)
+            
+         [type="submit"]
+            width: 100px
+            background-color: $body-alt-bottom
+            color: $site-color
+            line-height: 2.4
+            cursor: pointer
+            text-transform: uppercase
+            letter-spacing: 1.5px
+            border: 1px solid $border-color
+            font:
+               size: 1rem
+               weight: 600
+            
+            &:hover
+               background-color: $header-color
+            
+      @media (max-width: 650px)
+         margin: 0
+         padding: 20px 0
+      
+      @media (max-width: 400px)
+         
+         form
+            .form-text
+               input
+                  width: 100%
+   /* End of Support Stylesheet */
+   
+   
+   
+   
+   /* Start of Gallery Stylesheet */
+   .gallery-flexrow
+      +display(flex)
+      +justify-content(center)
+      +flex-wrap(wrap)
+      
+      .gallery-flexitem
+         width: 215px
+         padding: 6px
+         margin: 10px
+         border: 1px solid $border-color
+         border-radius: 2px
+         box-shadow: 0 0 4px rgba(#e2e2e2, .7)
+      
+         .gallery-flexitem-title
+            font:
+               weight: 600
+            
+         .gallery-flexitem-desc
+            +display(block)
+            margin-bottom: 5px
+            font:
+               size: .9rem  
+                  
+         @media (max-width: 500px)
+            width: 100%
+   /* End of Gallery Stylesheet */
+   
+   
+   
+            
+   /* Start of Contact Stylesheet */
+   .contact-text            
+      h1
+         margin-bottom: 20px
+
+      p 
+         margin-bottom: 2rem
+
+   .contact-location
+      height: 450px
+
+      .contact-map
+         +position(absolute, null 0 null 0)
+         height: 450px
+         overflow: hidden
+         border:
+            width: 1px 0 0
+            style: solid
+            color: $border-color         
+         background:
+            image: url('../img/map.png')
+            repeat: no-repeat
+            size: cover
+            position: center center
+
+   .contact-social
+
+      .socials
+         max-width: 1000px
+         margin: -37px auto 0
+         padding: 0 1rem
+         z-index: 5
+         +position(absolute, null 0 null 0)
+         +display(flex)
+         +justify-content(space-around)
+
+         .social-link
+            +display(block)
+            +size(90px)
+            border-radius: 50%
+            padding: 5px
+            +transition(100ms)
+
+            &:hover
+               +transform(scale(1.2))
+
+            img
+               border: 7px solid white
+               border-radius: 50%
+               box-shadow: 0px 0px 6px 0px rgba(black, .3)
+
+   .contact-email
+      +display(block)
+      height: 300px
+
+      h1 
+         color: $body-alt
+         height: 300px
+         font-size: 5rem
+         padding: 89px 0
+         margin: 0
+         border: 20px solid $body-alt-bottom
+         +position(absolute, null 0 null 0)
+         +transition(100ms)
+
+         &:hover
+            font-size: 5.5rem
+   /* End of Contact Stylesheets */
+   
+   
+
+   
+   /* start of Privacy Policy Stylesheets */
+   .privacy-policy
+      h1
+         margin-bottom: 2rem
+      
+      h3
+         padding-top: 1rem
+         font-weight: 600
+      
+      ul
+         margin-bottom: 1.5rem
+         
+      p
+         margin-bottom: 1rem
+         text-align: justify
+   /* end of Privacy Policy Stylesheets */
+
+
+
+   
+
+.page-sidebar
+   +flex(1 0 270px)
+   margin-left: 20px
+   
+   @media (max-width: 992px)
+      +display(none)
+
+   .sidebar 
+      overflow-y: hidden
+      padding: 5px
+      border-left: 1px solid $border-color
+
+      > *
+         margin: 0         
+         padding: 5px 0 3px 10px
+
+      h2
+         background-color: $body-alt-bottom
+         text-transform: uppercase
+         font:
+            size: 17px
+            weight: 600
+         
+         border:
+            width: 0 0 1px 1px
+            style: solid
+            color: $border-color
+
+      ul
+         list-style-type: none
+         padding-bottom: 50px
+         border:
+            width: 0 0 0 1px
+            style: solid
+            color: $border-color
+            
+         &:last-of-type
+            padding-bottom: 5px
+
+         li
+            margin-top: 3px
+            +position(relative)
+
+            &:before
+               content: ""
+               +position(absolute, 50% null null -10px)
+               +size(5px 1px)
+               background-color: $border-color
+
+            a
+               font-size: 15px
+               padding: 2px 5px
+               border-radius: 2px
+               background-color: rgba($body-color, .7)
+               color: $site-color
+
+               &:hover
+                  background-color: $body-alt-bottom
+               

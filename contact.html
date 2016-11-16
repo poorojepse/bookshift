@@ -1,0 +1,45 @@
+---
+layout: default
+title: Contact
+breadcrumbs: true
+changefreq: weekly
+---
+
+<div class="section-main page-bg">
+   <div class="page-container unpad-bottom">
+      <div class="page-main">
+         <div class="contact-text">
+            <h1>{{site.data.settings.title}}</h1>
+            <p>{{site.data.settings.website}}<br>
+               Dampas District<br>
+               Tagbilaran City, 6300<br>
+               {{site.data.settings.phoneno}}<br>
+            </p>
+
+            <h1>Store Hours</h1>
+            <p>Mon-Fri 9am-6pm <br>
+               Closed on Sunday and most holidays
+            </p>
+         </div>
+         
+         <div class="contact-location">
+            <div class="contact-map">
+            </div>
+         </div>
+
+         <div class="contact-social">
+            <div class="socials">
+               {% for social in site.data.settings.socials %}
+                  <a class="social-link" href="{{social.link}}" target="_blank">
+                     <img class="social-img" src="{{site.baseurl}}/assets/img/social/{{social.icon}}.svg" alt="{{social.icon}}">
+                  </a>   
+               {% endfor %}
+            </div>
+         </div>
+
+         <a class="contact-email text-center" href="mailto:{{site.data.settings.email}}">
+            <h1>{{site.data.settings.email}}</h1>
+         </a>
+       </div>
+   </div>
+</div>

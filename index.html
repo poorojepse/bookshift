@@ -1,0 +1,73 @@
+---
+layout: default
+afterTitle: Collections of great comics from the great author
+priority: 1.0
+changefreq: weekly
+---
+
+<div class="section-alt pad-vert slider">
+   <div class="container">
+      <div class="slide-flexrow">
+         <div class="slide-text">
+            <h1 class="slide-title">Boneville</h1>
+            <div class="slide-blur">
+               <p>Best Comic Book by the National Cartoonists Society.</p>
+               
+               <p>Winner of 11 Harvey Awards and 10 Eisner Awards including Best Cartoonist and Best Humor Publication.</p>
+               
+               <p>BONE has also won multiple international awards in Italy, France, Germany, Spain, Finland and Norway.</p>
+            </div>
+         </div>
+         <a class="slide-img" href="#">
+            {% for slide in site.data.settings.bone %}
+            <img class="img-responsive {{slide.imgno}} unpad-bottom" src="{{site.baseurl}}/assets/img/bone/{{slide.img}}.jpg">
+            {% endfor %}
+         </a>
+      </div>
+   </div>
+</div>
+
+<div class="section-main pad-bottom">
+   <div class="container">
+      <div class="text-center pad-top">
+         <h1>Bone Comic Books</h1> 
+         <p>The 20th Anniversary Edition of BONE features the entire saga in full color!</p>
+         <div class="post-flexrow">
+            {% include book-list.html title="Bone" %}
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="section-alt pad-bottom">
+   <div class="container">
+      <div class="text-center pad-top">
+         <h1>Saga Comic Books</h1>
+         <p>Voted Best Comic of the year by MTV Geek and Best New Series by Paradox Comics. Voted a finalist in the GoodReads Best GN of 2012 contest.</p>
+         <div class="post-flexrow">
+            {% include book-list.html title="Saga" %}
+         </div>         
+      </div>  
+   </div>   
+</div>
+
+<div class="section-main pad-bottom">
+   <div class="container">
+      <div class="text-center pad-top">
+         <h1>East to West Comic Book</h1>
+         <p>This is the world. It is not the one we wanted, but it is the one we deserved. The Four Horsemen of the Apocalypse roam the Earth, signaling the End Times for humanity, and our best hope for life, lies in DEATH!</p>
+         <div class="post-flexrow three-column">
+            {% include book-list.html title="East to West" %}
+         </div>      
+      </div>
+   </div>
+</div>
+
+<div class="section-alt-bottom">
+   <div class="container">
+      <div class="text-center pad-vert">
+         <h1>My First Static Website</h1>
+         <p class="max800">At the end, i finally finished my first showcase website. Creating this website is my decision from the start, this is the only piece i have for now that client will hire me. I have no boss who will give me a project, I'm just on my own. I'm mastering first making static website because if client will hire me, i can create a website they need without any hustle like searching in google if i have a problem. for I only connecting to my sister wifi, who is residing beside of the house i live now.</p>
+      </div>   
+   </div>
+</div>

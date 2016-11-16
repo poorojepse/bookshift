@@ -1,0 +1,174 @@
+*, *:before, *:after 
+   box-sizing: border-box
+
+html
+   font-size: 15px
+   -webkit-tap-heighlight-color: transparent
+
+body
+   margin: 0
+   padding-top: 5rem
+   line-height: 1.5
+   color: $site-color
+   background-color: $body-color
+   font:
+      family: $site-font
+      size: 1rem
+   
+   @media (max-width: 768px)
+      padding-top: 0rem
+      
+      
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary 
+   +display(block)
+      
+h1, h2, h3, h4, h5, h6
+   line-height: 1.1
+   margin: 0 0 .8rem
+   font:
+      weight: normal
+      family: $site-font
+      
+ol, ul, dl
+   margin-top: 0
+   margin-bottom: 1.5rem
+   
+address
+   margin-bottom: .5rem
+   font-style: normal
+   line-height: inherit
+   
+img
+   vertical-align: middle
+   border: 0
+   
+p
+   margin-top: 0
+   margin-bottom: 1rem
+   
+.site
+   +display(flex)
+   +flex-direction(column)
+      
+.page-bg
+   background-color: $page-color
+      
+.section-breadcrumbs
+   background-color: $body-alt
+   padding: 0 20px
+   
+.container
+   padding: 15px 0
+   margin: 0 auto
+   +position(relative)
+      
+   @media (min-width: 768px)
+      width: 738px
+      
+   @media (max-width: 768px)
+      padding: 15px 14px
+   
+   @media (min-width: 992px)
+      width: 963px
+      
+   @media (min-width: 1200px)
+      width: 1170px
+      
+      
+      
+
+   
+.page-container
+   +position(relative)
+   background-color: $body-color
+   margin: 0 auto
+   padding: 65px 40px
+   
+   &:before
+      content: ""
+      +position(absolute, 0 null 0 -50px)
+      +size(50px 100%)
+      +transform(rotate(180deg))
+      background:
+         color: transparent
+         image: url('../img/main-shadow.png')
+         repeat: repeat-y
+         
+   &:after
+      content: ""
+      +position(absolute, 0 -50px 0 null)
+      +size(50px 100%)
+      background:
+         color: transparent
+         image: url('../img/main-shadow.png')
+         repeat: repeat-y        
+      
+   @media (min-width: 768px)
+      width: 638px
+      
+   @media (max-width: 768px)
+      padding: 30px
+      
+      &:before, &:after
+         +display(none)
+   
+   @media (min-width: 992px)
+      width: 863px
+      
+   @media (min-width: 1200px)
+      width: 1070px
+      
+      
+      
+.support-flexrow
+   +display(flex)
+   +flex-wrap(nowrap)
+      
+.main-flexitem
+   +flex(1 1 100%)      
+   
+.img-responsive
+   +size(100% auto)
+   +display(block)
+   margin: 0 auto
+   padding-bottom: 1rem
+   
+.max800
+   max-width: 800px
+   margin: 0 auto
+   
+.text-center
+   text-align: center
+      
+.pad-vert
+   padding-top: 2rem
+   padding-bottom: 2rem
+   
+.pad-top
+   padding-top: 2rem
+   
+.pad-bottom
+   padding-bottom: 20px
+   
+   
+   
+   
+.unpad-vert
+   padding-top: 0
+   padding-bottom: 0
+   
+.unpad-top
+   padding-top: 0px
+   
+.unpad-bottom
+   padding-bottom: 0px
+   
+   
+   
+.red
+   color: #fe1111
+   
+.blue
+   color: lighten(#0036ff, 10)
+
+   

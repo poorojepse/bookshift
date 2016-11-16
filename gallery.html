@@ -1,0 +1,22 @@
+---
+layout: default
+title: Gallery
+breadcrumbs: true
+changefreq: weekly
+---
+
+<div class="section-main page-bg">
+   <div class="page-container">
+      <div class="page-main">
+         <div class="gallery-flexrow">
+            {% for gallery in site.data.gallery %}
+            <div class="gallery-flexitem text-center">
+               <img class="img-responsive" src="/assets/img/gallery/{{gallery.image}}.jpg">
+               <h3 class="gallery-flexitem-name">{{gallery.name}}</h3>
+               <em class="gallery-flexitem-desc">{{gallery.desc}}</em>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>

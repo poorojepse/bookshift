@@ -1,0 +1,67 @@
+---
+layout: default
+title: Support
+breadcrumbs: true
+---
+
+<div class="section-main page-bg">
+   <div class="page-container">
+      <div class="support-flexrow">
+         
+         <div class="page-main main-flexitem">
+            
+            <header class="page-header">
+               <h1 class="bluff">Were happy to serve you</h1>
+               <p class="sub-bluff">How would you like to get help?</p>
+            </header>
+            
+            <div class="support-form">
+               <form action="https://formspree.io/{{site.data.settings.email}}" method="POST">
+                  
+                  <div class="form-text">
+                     <label><p>Your Name</p>
+                     <input type="text" name="name"></label>
+
+                     <label><p>Your Email/Phone Number</p>
+                     <input type="email" name="_replyto"></label>
+                  </div>
+                  
+                  <label><p>Tell us about your concern</p>
+                  <textarea name="message"></textarea></label>
+                  
+                  <section class="submit-wrap">
+                  <input type="submit" value="send">
+                  </section>
+               
+               </form>
+            </div>
+            
+         </div>
+
+         <div class="page-sidebar">
+            <div class="sidebar">
+               <h2>Address</h2>
+               <ul>
+                  <li>Dampas District<br>Tagbilaran City, 6300<br>Bohol, Philippines</li>
+               </ul>
+
+               <h2>Store Hours</h2>
+               <ul>
+                  <li>Hours: 8am - 8pm (Daily)</li>
+               </ul>
+
+               <h2>Telephone</h2>
+               <ul>
+                  <li>(032) 411-4180</li>
+               </ul>
+
+               <h2>Email</h2>
+               <ul>
+                  <li>Gmail: <a href="mailto:{{site.data.settings.email}}" target="_blank">{{site.data.settings.email}}</a></li>
+               </ul>
+            </div>            
+         </div>
+
+      </div>
+   </div>
+</div>

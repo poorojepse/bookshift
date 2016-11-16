@@ -1,0 +1,73 @@
+.site-header
+   +flex-shrink(0)
+   
+   .sticky-nav
+      padding: 0 15px
+      +size(100% auto)
+      +position(fixed, 0 null null 0)
+      background-color: $header-color
+      z-index: 999
+      border:
+         width: 1px 0
+         style: solid
+         color: $body-alt
+      
+      @media (max-width: 768px)
+         +position(relative)
+         
+      .container-nav
+         margin: 0 auto
+            
+         @media (min-width: 768px)
+            width: 738px
+            
+         @media (min-width: 992px)
+            width: 963px
+               
+         @media (min-width: 1200px)
+            width: 1170px
+            
+         .nav-container
+            border-radius: 0 0 2px 2px
+            padding: 14px 0
+            +display(flex)
+            +flex-wrap(nowrap)
+            +justify-content(space-between)
+               
+            @media screen and (max-width: 768px)
+               +display(block)
+               +justify-content(center)
+               
+               .nav-logo
+                  margin: 8px auto 15px
+
+            .nav-logo
+               +flex(0 0 215px)
+               max-width: 215px
+                  
+            .nav-main
+               +flex(0 1 600px)
+               +display(flex)
+               +justify-content(space-around)
+               +align-items(center)
+               
+               > a
+                  line-height: 1.2
+                  padding: 2px 10px
+                  border-radius: 3px
+                  border: 2px solid transparent
+                  font:
+                     size: 18px
+                     
+                  &:hover, &.active
+                     color: #fff
+                     border: 2px solid white
+                     background-color: #14557a
+                     
+               @media (max-width: 650px)
+                  .home, .gallery,
+                     +display(none)
+                  
+            .nav-mobile
+               +display(none)
+

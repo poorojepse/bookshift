@@ -1,0 +1,5 @@
+markdown: redcarpet
+baseurl: /bookshift
+exclude: ['README.md']
+permalink: pretty
+      
