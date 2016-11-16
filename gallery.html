@@ -11,7 +11,7 @@ changefreq: weekly
          <div class="gallery-flexrow">
             {% for gallery in site.data.gallery %}
             <div class="gallery-flexitem text-center">
-               <img class="img-responsive" src="/assets/img/gallery/{{gallery.image}}.jpg">
+               <img class="img-responsive" src="{{site.baseurl}}/assets/img/gallery/{{gallery.image}}.jpg">
                <h3 class="gallery-flexitem-name">{{gallery.name}}</h3>
                <em class="gallery-flexitem-desc">{{gallery.desc}}</em>
             </div>
