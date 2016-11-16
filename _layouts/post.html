@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+<div class="section-breadcrumbs">
+   <div class="container">
+      <div class="breadcrumbs-content">
+         {% for info in site.data.content-info %}
+            {% if info.book == page.title %}
+               <h1>{{info.book}}</h1>
+               {{info.content | markdownify}}
+            {% endif %}
+         {% endfor %}
+      </div>
+   </div>
+</div>
+
+<div class="section-main page-bg">
+   <div class="page-container">
+      
+      <div class="post-header">
+         <h1 class="post-bluff">{{page.title}}:
+            {% if page.subtitle %}
+               {{page.subtitle}}
+            {% elsif page.chapter %}
+               {{page.chapter}}
+            {% else %}
+               {{page.volume}}
+            {% endif %}
+         </h1>
+         <div class="post-seelist">
+            <a class="post-seelist" href="{{site.baseurl}}/order/book/{{page.folder}}">See all lists by {{page.author}}</a>
+         </div>
+      </div>
+      
+      <div class="support-flexrow">
+         <div class="post-mainX">
+            <div class="post-img post-item">
+               <img class="img-responsive" src="{{site.baseurl}}/assets/img/{{page.folder}}/{{page.image}}.jpg" alt="Photo of {{page.image}}">
+            </div>
+
+            <dl class="post-desc post-item">
+               <h2>Product Detail</h2>
+               <dt>Title:</dt><dd>{{page.title}}</dd>
+
+               {% if page.chapter %}
+               <dt>Chapter:</dt><dd>{{page.chapter}}</dd>
+               {% endif %}
+
+               {% if page.subtitle %}
+               <dt>Sub-title:</dt><dd>{{page.subtitle}}{% if page.subsubtitle %} - {{page.subsubtitle}}{% endif %}</dd>
+               {% endif %}
+
+               <dt>Author:</dt><dd>{{page.author}}</dd>
+
+               {% if page.artist %}
+               <dt>Artist:</dt><dd>{{page.artist}}</dd>
+               {% endif %}
+
+               {% if page.illustrator %}
+               <dt>Illustrator:</dt><dd>{{page.illustrator}}</dd>
+               {% endif %}
+
+               <dt>Language:</dt><dd>{{page.language}}</dd>
+               <dt>Hardcover:</dt><dd>{{page.hardcover}}</dd>
+               <dt>Color:</dt><dd>{{page.color}}</dd>
+               <dt>Product Dimension:</dt><dd>{{page.pdimension}}</dd>
+
+               {% if page.publisher %}
+               <dt>Publisher:</dt><dd>{{page.publisher}}</dd>
+               {% endif %}
+
+               {% if page.publication %}
+               <dt>Publication Data:</dt><dd>{{page.publication}}</dd>
+               {% endif %}
+
+               {% if page.soldby %}
+               <dt>Sold by:</dt><dd>{{page.soldby}}</dd>
+               {% endif %}
+
+               <dt>Weight:</dt><dd>{{page.weight}}</dd>
+               <dt>ISBN #:</dt><dd>{{page.isbn-13}}</dd>
+            </dl>
+
+            <div class="post-purchase post-item">
+               <div class="purchase-top">
+                  <h2 class="price">$10.00</h2>
+                  <div class="quantity">
+                     <label for="quantity" class="a-native-dropdown">Qty:</label>
+                     <select name="quantity" autocomplete="off" id="quantity" tabindex="-1" class="a-native-dropdown">
+                        <option value="1" selected="">1
+                        </option>
+                        {% for i in (2..30) %}
+                           <option value="i">{{i}}
+                           </option>   
+                        {% endfor %}
+                     </select>
+                  </div>
+               </div>
+
+               <p class="shipping"><span class="blue">FREE SHIPPING</span> on order with at least $25 of books.</p>
+
+               <p class="stock"><span class="red">In Stock</span><br> Ships from and sold by Amazon.com. Gift-wrap available</p>
+
+               <div class="addtocart">
+                  <a href="#"><img class="img-responsive" src="{{site.baseurl}}/assets/img/addtocart.png"></a>
+               </div>
+            </div>
+
+            <div class="content-summary post-item">
+               <div class="summary">
+                  <h2>Summary</h2>
+                  {{page.content}}
+               </div>
+            </div>
+         </div>
+
+         <div class="post-sidebar">
+            <div class="sidebar">               
+               {% if page.subtitle %}
+                  <h2>Related Books</h2>
+               {% elsif page.chapter %}
+                  <h2>Chapter List</h2>
+               {% else %}
+                  <h2>Volume List</h2>
+               {% endif %}
+               
+               {% include related-list.html title=page.title %}      
+            </div>
+         </div>
+
+         <div class="post-bg">
+            <img src="{{site.baseurl}}/assets/img/{{page.folder}}/{{page.folder}}-bg.jpg" alt="{{page.title}}">
+         </div>
+
+      </div>
+         
+   </div>
+</div>

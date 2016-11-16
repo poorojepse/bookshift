@@ -1,0 +1,25 @@
+{% for page in site.pages %}
+   {% if page.title == include.title %}
+   <div class="post-flexitem">
+      <a href="{{site.baseurl}}{{page.url}}">                  
+         <div class="post-img">
+            <img class="img-responsive" src="{{site.baseurl}}/assets/img/{{page.folder}}/{{page.image}}.jpg" alt="Photo of {{page.title}}: {{page.subtitle}}">
+         </div>
+      </a>
+      <div class="post-text">
+         <a href="{{site.baseurl}}{{page.url}}">   
+            <h4>
+               {% if page.chapter %}
+                  {{page.chapter}}
+               {% elsif page.volume %}
+                  {{page.volume}}
+               {% else %}
+                  {{page.subtitle}}
+               {% endif %}
+            </h4>
+         </a>
+            <p>Written by: {{page.author}}</p>
+      </div>
+   </div>
+   {% endif %}
+{% endfor %}

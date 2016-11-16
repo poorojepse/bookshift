@@ -1,0 +1,13 @@
+{% include header.html %}
+
+<main class="site-content">
+   
+{% if page.breadcrumbs %}
+   {% include breadcrumbs.html %}
+{% endif %}
+   
+{{content}}
+   
+</main>
+
+{% include footer.html %}

@@ -1,0 +1,104 @@
+.breadcrumbs-content
+   color: #fff
+   
+   h1
+      font-size: 1.5rem
+      
+   p
+      font-size: .9rem
+      margin: 0
+
+.site-content
+   border-top: 1px solid $border-color
+   border-bottom: 1px solid $border-color
+      background-color: $body-alt
+      
+   .section-main
+      border-top: 1px solid $border-color
+      border-bottom: 1px solid $border-color
+   
+   .section-alt
+      color: white
+      background-color: $body-alt
+      
+   .section-alt-bottom
+      background-color: $body-alt-bottom
+                        
+   > *
+      .post-flexrow
+         margin: 0 auto
+         +display(flex)
+         +flex-wrap(wrap)
+         +justify-content(center)
+
+         &.three-column
+            max-width: 700px
+
+         .post-flexitem
+            width: 215px
+            border: 1px solid #e2e2e2
+            background-color: white
+            border-radius: 2px
+            margin: 4px 8px 14px 8px
+            box-shadow: 0 0 4px rgba(#e2e2e2, .7)
+            
+            @media (max-width: 768px)
+               width: 130px
+
+            .post-text
+               color: $site-color
+               padding: 3px 8px
+
+               h4
+                  color: #551a8b
+
+               p
+                  font-size: .8rem
+                        
+   .slider      
+      
+      @media (max-width: 650px)
+         +display(none)
+            
+      .slide-flexrow
+         +display(flex)
+         +justify-content(center)
+         
+         .slide-text
+            padding: 20px 30px
+            +flex(0 1 524px)      
+            color: white
+            
+            > *
+               font-family: $slide-fontfam   
+            
+            h1
+               font-size: 4rem
+               margin-bottom: 3rem
+               
+            p
+               padding-left: 1px
+               font-size: 20px
+               margin-bottom: 40px
+               
+               &:last-of-type
+                  margin-bottom: 0
+               
+         .slide-img
+            height: 465px
+            +position(relative)
+            +flex(0 0 366px)
+            
+            > *
+               +position(absolute)
+               +size(220px 340px)
+               border: 4px solid #96e72f
+               
+            .img1
+               margin-left: 70px
+               
+            .img2
+               margin: 125px 0 0 110px
+               
+            .img3
+               margin: 68px 0 0 35px

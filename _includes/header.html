@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>{{site.data.settings.title}}{% if page.title %}- {{page.title}}{% endif %}{% if page.subtitle %}: {{page.subtitle}}{% elsif page.chapter %}: {{page.chapter}}{% elsif page.volume %}: {{page.volume}}{% endif %}{% if page.afterTitle %} - {{page.afterTitle}}{% endif %}
+   </title>
+   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" type="text/css">   
+   <meta name="description" content="{{page.meta}}">
+</head>
+<body class="site">
+   
+<header class="site-header">
+   <nav>
+      <div class="sticky-nav">
+         <div class="container-nav">
+            <div class="nav-container">
+               <div class="nav-logo">
+                  <a href="{{site.baseurl}}/">
+                     <img class="img-responsive unpad-bottom" src="{{site.baseurl}}/assets/img/{{site.data.settings.logo}}">
+                  </a>
+               </div>
+               <div class="nav-main">
+                  <a href="{{site.baseurl}}/" class="home">Home</a>
+                  <a href="{{site.baseurl}}/order/" class="order {% if page.url contains 'order' or page.url contains 'book' %}active{% endif %}">Order Now</a>
+                  <a href="{{site.baseurl}}/support/" class="support {% if page.url contains 'support' %}active{% endif %}">Support</a>
+                  <a href="{{site.baseurl}}/gallery/" class="gallery {% if page.url contains 'gallery' %}active{% endif %}">Gallery</a>
+                  <a href="{{site.baseurl}}/contact/" class="contact {% if page.url contains 'contact' %}active{% endif %}">Contact</a>
+               </div>
+               <div class="nav-mobile">
+               </div>
+            </div>   
+         </div>
+      </div>
+   </nav>   
+</header>

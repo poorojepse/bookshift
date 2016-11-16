@@ -1,0 +1,19 @@
+<ul>
+   {% for page in site.pages %}
+      {% if page.title == include.title %}
+
+      <li>
+         <a href="{{site.baseurl}}{{page.url}}">
+            {% if page.subtitle %}
+               {{page.subtitle}}
+            {% elsif page.chapter %}
+               {{page.chapter}}
+            {% else %}
+               {{page.volume}}
+            {% endif %}                              
+         </a>
+      </li>
+   
+      {% endif %}
+   {% endfor %}
+</ul>

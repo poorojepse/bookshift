@@ -1,0 +1,61 @@
+<div class="section-main page-bg">
+   <div class="page-container">
+      <div class="page-main">
+         
+         <header class="page-header">
+            <h1 class="bluff">Package</h1>
+         </header>
+      
+         <section class="book-package">
+            <h1 class="book-title">{{page.bookname}}: {{page.bookauthor}}</h1>
+            <a class="book-buy">20 Books + Accessories = {{page.price}}</a>
+         </section>
+         
+         <table cellspacing="0" class="book-item-list">
+            <tr>
+               <th class="header-book-title">Book Title</th>
+               <th class="header-book-author">by:</th>
+               <th class="header-language">Language</th>
+               <th class="header-color">Color</th>
+               <th></th>
+               <th>Price</th>
+               <th></th>
+               <th class="header-add-to-cart">Add<br>to<br>Cart</th>
+            </tr>
+            {% for book in site.pages %}
+            {% if book.title == page.bookname %}
+            <tr>
+               <td class="item-book-title">{{book.title}}: 
+                  {% if book.subtitle %}
+                     {{book.subtitle}}
+                  {% elsif book.chapter %}
+                     {{book.chapter}}
+                  {% else %}
+                     {{book.volume}}
+                  {% endif %}
+               </td>
+               <td class="item-book-author">
+                  {{book.author}}
+               </td>
+               <td class="item-language">{{book.language}}</td>
+               <td class="item-color">{{book.color}}</td>
+               <td class="item-see-more"><a href="{{site.baseurl}}{{book.url}}">more <br> info</a></td>
+               <td>{{book.price}}</td>
+               <td class="item-buy"><a href="#">Buy</a></td>
+               <td class="item-add-to-cart">
+                  <form method="get">
+                     <input type="checkbox" value="{{book.title}}">
+                  </form>
+               </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+         </table>
+         
+         <footer class="page-footer">
+            <em class="tips">Free shipping is only available with-in Tagbilaran City, Bohol</em>
+         </footer>
+         
+      </div>
+   </div>
+</div>
