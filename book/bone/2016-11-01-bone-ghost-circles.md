@@ -12,6 +12,7 @@ color: Full Color
 weight: 3.5 pounds
 pdimension: 6.25″ x 9.5″
 isbn-13: 978-1417797110
+breadcrumb: true
 image: bone-ghost-circles
 folder: bone
 ---

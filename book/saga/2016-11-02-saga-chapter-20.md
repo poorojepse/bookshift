@@ -12,6 +12,7 @@ color: Full Color
 weight: 3.5 pounds
 pdimension: 6" x 9"
 isbn-13: 978-188896354-0
+breadcrumb: true
 image: saga-20
 folder: saga
 ---

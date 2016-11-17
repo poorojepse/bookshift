@@ -14,6 +14,7 @@ pdimension: 6" x 9"
 isbn-13: 978-188896354-0
 publication: October 26, 2016
 soldby: Amazon Digital Services LLC
+breadcrumb: true
 image: east-to-west-volume-6
 folder: east-to-west
 ---

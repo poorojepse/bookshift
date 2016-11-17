@@ -15,6 +15,7 @@ isbn-13: 978-188896354-0
 publisher: Image Comics (April 22, 2014)
 publication: October 26, 2016
 soldby: Amazon Digital Services LLC
+breadcrumb: true
 image: east-to-west-volume-2
 folder: east-to-west
 ---

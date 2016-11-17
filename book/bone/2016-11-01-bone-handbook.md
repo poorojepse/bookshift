@@ -12,6 +12,7 @@ color: Full Color
 weight: 3.5 pounds
 pdimension: 6" x 9"
 isbn-13: 978-0-545-21142-0
+breadcrumb: true
 image: bone-handbook
 folder: bone
 ---

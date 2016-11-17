@@ -12,6 +12,7 @@ color: Full Color
 weight: 3.5 pounds
 pdimension: 0.9″ x 9.2″ x 12″
 isbn-13: 978-1593074418
+breadcrumb: true
 image: bone-the-art-of-bone
 folder: bone
 ---

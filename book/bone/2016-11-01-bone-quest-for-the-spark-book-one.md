@@ -13,6 +13,7 @@ color: Full Color
 weight: 3.5 pounds
 pdimension: 6.25″ x 9.5″
 isbn-13: 978-0545141024
+breadcrumb: true
 image: bone-quest-for-the-spark-book-one
 folder: bone
 ---
