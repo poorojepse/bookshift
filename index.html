@@ -11,14 +11,14 @@ changefreq: weekly
          
          <div class="slide-flexrow">
             <div class="slide-text">
-               <h2 class="slide-title">Boneville</h2>
+               <h1 class="slide-title">Boneville</h1>
                <div class="slide-blur">
                   <h3>Best Comic Book by the National Cartoonists Society.</h3>
                   <h3>Winner of 11 Harvey Awards and 10 Eisner Awards including Best Cartoonist and Best Humor Publication.</h3>
                   <h3>BONE has also won multiple international awards in Italy, France, Germany, Spain, Finland and Norway.</h3>
                </div>
             </div>
-            <a class="slide-img" href="#">
+            <a class="slide-img" href="{{site.baseurl}}/order/book/bone/">
                {% for slide in site.data.settings.bone %}
                <img class="img-responsive {{slide.imgno}} unpad-bottom" src="{{site.baseurl}}/assets/img/bone/{{slide.img}}.jpg">
                {% endfor %}

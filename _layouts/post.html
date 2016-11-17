@@ -2,19 +2,6 @@
 layout: default
 ---
 
-<div class="section-breadcrumb">
-   <div class="container">
-      <div class="breadcrumb-content">
-         {% for info in site.data.content-info %}
-            {% if info.book == page.title %}
-               <h3 class="breadcrumb-title">{{info.book}}</h3>
-               {{info.content | markdownify}}
-            {% endif %}
-         {% endfor %}
-      </div>
-   </div>
-</div>
-
 <div class="section-main page-bg">
    <div class="page-container">
       
@@ -32,7 +19,7 @@ layout: default
             </h2>
          </div>
          <div class="post-seelist">
-            <a class="post-seelist" href="{{site.baseurl}}/order/book/{{page.folder}}">See all books by {{page.author}}</a>
+            <a href="{{site.baseurl}}/order/book/{{page.folder}}">See all books by {{page.author}}</a>
          </div>
       </div>
       

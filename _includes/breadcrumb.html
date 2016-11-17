@@ -2,8 +2,8 @@
    <div class="container">
       <div class="breadcrumb-content">
          {% for info in site.data.content-info %}
-            {% if info.page == page.title %}
-               <h3 class="breadcrumb-title">{{info.page}}</h3>
+            {% if info.name == page.title or info.name == page.bookname %}
+               <h3 class="breadcrumb-title">{{info.name}}</h3>
                {{info.content | markdownify}}
             {% endif %}
          {% endfor %}

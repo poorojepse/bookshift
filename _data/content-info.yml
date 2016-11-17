@@ -1,26 +1,26 @@
--  book: Bone
+-  name: Bone
    folder: bone
    content: 'After being run out of **Boneville**, the three Bone cousins, Fone Bone, Phoney Bone, and Smiley Bone are separated and lost in a vast uncharted desert. It will be the longest but funniest year of their lives.'
    
--  book: Saga
+-  name: Saga
    folder: saga
    content: 'When two soldiers from opposite sides of a never-ending galactic war fall in love, they risk everything to bring a fragile new life into a dangerous old universe.'
    
--  book: East to West
+-  name: East to West
    folder: east-to-west
    content: '**THE APOCALYPSE: YEAR TWO** begins! Following the dramatic conclusion of YEAR ONE, the Great Beast now roams the fractured United States of America.'
    
--  page: Contact
+-  name: Contact
    content: '**Cover and Bind** office is located in Dampas District, Tagbilaran City, Bohol Philippines'
    
--  page: Support
+-  name: Support
    content: 'Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;'
    
--  page: Order
+-  name: Order
    content: 'Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Donec interdum, metus et hendrerit aliquet, '
    
--  page: Order List
+-  name: Order List
    content: 'Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesu.'
    
--  page: Gallery
+-  name: Gallery
    content: 'Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros.'

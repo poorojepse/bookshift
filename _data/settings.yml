@@ -6,15 +6,17 @@ email: bookshift@gmail.com
 website: BookSHIFT.com
 phoneno: (619) 287-5346
 
+favicon: 'favicon.png'
 logo: 'logo.jpg'
+
+seo:
+   rel-author: 'https://plus.google.com/u/0/+PoorOjepse/'
+   rel-publisher: 'https://plus.google.com/u/0/+PoorOjepse/'
 
 socials:
 - {link: 'http://facebook.com/bookshift', icon: 'facebook'}
 - {link: 'http://twitter.com/bookshift', icon: 'twitter'}
 - {link: 'http://youtube.com/bookshift', icon: 'youtube'}
-
-
-
 
 bone:
 - {imgno: 'img1', img: 'bone-the-great-cow-race'}
