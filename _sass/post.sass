@@ -8,24 +8,22 @@
       font-size: 2rem
       +display(inline-block)
 
-   .post-seelist
+   .post-seelist a
       padding: 4px 10px
-      
-      a
-         background-color: $body-alt
-         margin-right: 5px
-         border-radius: 3px
-         text-align: center
+      background-color: $body-alt
+      margin-right: 5px
+      border-radius: 3px
+      text-align: center
+      +display(block)
 
-         &:hover
-            color: $header-color
+      &:hover
+         color: $header-color
          
    @media (max-width: 650px)
       +display(block)
-      margin-bottom: 5px
+      margin-bottom: 10px
       
       .post-text
-         width: 260px
          margin: 0 auto
          text-align: center
          
@@ -35,9 +33,8 @@
       
       .post-seelist a
          margin: 0 auto
-         padding: 2px 5px
-         width: 260px
-         +display(block)
+         padding: 6px 10px
+         max-width: 260px
 
 .post-mainX
    z-index: 1

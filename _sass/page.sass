@@ -86,8 +86,6 @@
             
       .item-see-details
          background-color: $body-alt
-         text-align: center
-         padding: 0 3px
          
          > a
             +display(none)
@@ -99,10 +97,11 @@
             .see-all
                +display(block)
                   
-         @media (max-width: 650px)
-            padding: 2px
+         @media (max-width: 650px)            
+            padding: 3px
             
             .see-more
+               text-align: center
                +display(block)
             
             
@@ -212,8 +211,7 @@
                   
          @media (max-width: 500px)
             .header-price, .item-price, .item-more-details
-               padding: 0 3px
-               
+               padding: 3px               
    /* end of Order List Stylesheets */
    
    
@@ -366,6 +364,10 @@
          margin: 0
          border: 20px solid $body-alt-bottom
          +position(absolute, null 0 null 0)
+         +transition()
+         
+         &:hover
+            background-color: lighten($body-alt-bottom, 15)
          
    @media (max-width: 650px)
       .contact-social .socials
@@ -382,11 +384,10 @@
          height: 150px
          
          h1
-            font-size: 30px
+            font-size: 1.9rem
             padding: 58px 0 50px
             height: 150px
-            border-width: 5px
-            
+            border-width: 5px            
    /* End of Contact Stylesheets */
    
    
