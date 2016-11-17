@@ -9,15 +9,14 @@
    .page-header
       width: 100%
 
-      .bluff
+      .page-title
          margin-bottom: 20px
 
-      .sub-bluff
+      .page-blurb
          margin-bottom: 2rem
          
    .page-footer
       .tips
-         font-size: .9rem
       
    
    /* Start of Order Stylesheet */
@@ -33,7 +32,6 @@
             padding: 2px 12px
             
          th
-            font-size: 16px
             text-transform: uppercase
          
          &:nth-child(odd)
@@ -43,50 +41,75 @@
             background-color: $body-alt-bottom
          
       .header-book-name, .item-book-name
-         min-width: 100px
+         min-width: 122px
+         
+         @media (max-width: 500px)
+            min-width: 80px
          
       .header-save, .item-save
          width: 100px
          text-align: center
+         
+         @media (max-width: 650px)
+            +display(none)
          
       .header-price, .item-price
          text-align: center
          
       .header-add-to-cart, .item-add-to-cart
          text-align: center
-         font-size: 10px
          line-height: 1
-         width: 20px         
+         padding: 0 2px
 
       .item-buy
          padding: 2px 0
          max-width: 120px
       
-         a
+         > a
             background-color: $header-color
             color: $site-color
             text-align: center
             padding: 2px 10px
             border-radius: 2px
-            +display(block)
+            +display(none)
             
             &:hover
                color: darken($site-color, 20)
-         
             
-      .item-see-all
+         @media (min-width: 650px)
+            .buy-package
+               +display(block)
+      
+         @media (max-width: 650px)
+            .buy
+               +display(block)
+            
+      .item-see-details
          background-color: $body-alt
+         text-align: center
+         padding: 0 3px
          
-         a
-            font-size: .8rem
-               
+         > a
+            +display(none)
+         
             &:hover
                color: $header-color
+            
+         @media (min-width: 650px)
+            .see-all
+               +display(block)
+                  
+         @media (max-width: 650px)
+            padding: 2px
+            
+            .see-more
+               +display(block)
+            
             
       @media (max-width: 968px)
          .header-book-author, .item-book-author
             +display(none)
-   /* End of Order Now Stylesheet */
+   /* End of Order Stylesheet */
    
    
    
@@ -132,7 +155,6 @@
             text-align: left
             
          th
-            font-size: 16px
             text-transform: uppercase
             
          
@@ -143,16 +165,14 @@
             background-color: $body-alt-bottom
       
          .header-book-title, .item-book-title
-            min-width: 200px
+            min-width: 100px
             
          .header-book-author, .item-book-author
             ~ *
                text-align: center
          
-         .header-add-to-cart, .item-add-to-cart
-            font-size: 10px
-            width: 20px
-            line-height: 1
+         .header-add-to-cart, .item-add-to-cart  
+            padding: 0 2px
       
          .item-buy
             padding: 2px 0
@@ -168,14 +188,13 @@
                &:hover
                   color: darken($site-color, 20)
          
-         .item-see-more
+         .item-more-details
             width: 50px
             line-height: 1px
             background-color: $body-alt
 
             a
                text-align: center
-               font-size: .8rem
                line-height: 1
                color: white
                padding: 1px 4px 
@@ -190,6 +209,11 @@
          @media (max-width: 630px)
             .header-book-author, .item-book-author
                +display(none)
+                  
+         @media (max-width: 500px)
+            .header-price, .item-price, .item-more-details
+               padding: 0 3px
+               
    /* end of Order List Stylesheets */
    
    
@@ -230,7 +254,6 @@
             letter-spacing: 1.5px
             border: 1px solid $border-color
             font:
-               size: 1rem
                weight: 600
             
             &:hover
@@ -258,25 +281,26 @@
       +flex-wrap(wrap)
       
       .gallery-flexitem
-         width: 215px
+         width: 280px
          padding: 6px
          margin: 10px
          border: 1px solid $border-color
          border-radius: 2px
          box-shadow: 0 0 4px rgba(#e2e2e2, .7)
-      
-         .gallery-flexitem-title
-            font:
-               weight: 600
+         
+         a
+            color: $site-color
+
+         .gallery-flexitem-img
+            box-shadow: 0 0 1px 0px rgba(black, .2)
+            padding: 0
+            
+         .gallery-flexitem-name
+            margin-top: 1rem
             
          .gallery-flexitem-desc
             +display(block)
             margin-bottom: 5px
-            font:
-               size: .9rem  
-                  
-         @media (max-width: 500px)
-            width: 100%
    /* End of Gallery Stylesheet */
    
    
@@ -284,9 +308,6 @@
             
    /* Start of Contact Stylesheet */
    .contact-text            
-      h1
-         margin-bottom: 20px
-
       p 
          margin-bottom: 2rem
 
@@ -298,7 +319,7 @@
          height: 450px
          overflow: hidden
          border:
-            width: 1px 0 0
+            width: 1px 0 1px
             style: solid
             color: $border-color         
          background:
@@ -340,15 +361,32 @@
       h1 
          color: $body-alt
          height: 300px
-         font-size: 5rem
+         font-size: 5vw
          padding: 89px 0
          margin: 0
          border: 20px solid $body-alt-bottom
          +position(absolute, null 0 null 0)
-         +transition(100ms)
+         
+   @media (max-width: 650px)
+      .contact-social .socials
+         margin-top: -21px
+         
+         .social-link
+            +size(45px)
+            padding: 0px
 
-         &:hover
-            font-size: 5.5rem
+            img
+               border-width: 3px
+         
+      .contact-email
+         height: 150px
+         
+         h1
+            font-size: 30px
+            padding: 58px 0 50px
+            height: 150px
+            border-width: 5px
+            
    /* End of Contact Stylesheets */
    
    
@@ -391,12 +429,10 @@
          margin: 0         
          padding: 5px 0 3px 10px
 
-      h2
+      .sidebar-title
+         +display(block)
          background-color: $body-alt-bottom
          text-transform: uppercase
-         font:
-            size: 17px
-            weight: 600
          
          border:
             width: 0 0 1px 1px
@@ -425,7 +461,6 @@
                background-color: $border-color
 
             a
-               font-size: 15px
                padding: 2px 5px
                border-radius: 2px
                background-color: rgba($body-color, .7)

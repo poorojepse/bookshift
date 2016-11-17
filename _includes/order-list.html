@@ -3,11 +3,11 @@
       <div class="page-main">
          
          <header class="page-header">
-            <h1 class="bluff">Package</h1>
+            <h3 class="page-title">Package</h3>
          </header>
       
          <section class="book-package">
-            <h1 class="book-title">{{page.bookname}}: {{page.bookauthor}}</h1>
+            <h4 class="book-title">{{page.bookname}}: {{page.bookauthor}}</h4>
             <a class="book-buy">20 Books + Accessories = {{page.price}}</a>
          </section>
          
@@ -18,9 +18,9 @@
                <th class="header-language">Language</th>
                <th class="header-color">Color</th>
                <th></th>
-               <th>Price</th>
+               <th class="header-price">Price</th>
                <th></th>
-               <th class="header-add-to-cart">Add<br>to<br>Cart</th>
+               <th class="header-add-to-cart smallest">Add<br>to<br>Cart</th>
             </tr>
             {% for book in site.pages %}
             {% if book.title == page.bookname %}
@@ -39,8 +39,8 @@
                </td>
                <td class="item-language">{{book.language}}</td>
                <td class="item-color">{{book.color}}</td>
-               <td class="item-see-more"><a href="{{site.baseurl}}{{book.url}}">more <br> info</a></td>
-               <td>{{book.price}}</td>
+               <td class="item-more-details"><a class="small" href="{{site.baseurl}}{{book.url}}">more <br> details</a></td>
+               <td class="item-price">{{book.price}}</td>
                <td class="item-buy"><a href="#">Buy</a></td>
                <td class="item-add-to-cart">
                   <form method="get">

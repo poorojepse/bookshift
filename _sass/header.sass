@@ -34,13 +34,6 @@
             +flex-wrap(nowrap)
             +justify-content(space-between)
                
-            @media screen and (max-width: 768px)
-               +display(block)
-               +justify-content(center)
-               
-               .nav-logo
-                  margin: 8px auto 15px
-
             .nav-logo
                +flex(0 0 215px)
                max-width: 215px
@@ -48,26 +41,83 @@
             .nav-main
                +flex(0 1 600px)
                +display(flex)
+               +align-self(flex-end)
                +justify-content(space-around)
                +align-items(center)
                
                > a
                   line-height: 1.2
+                  font-size: 1.1rem
                   padding: 2px 10px
                   border-radius: 3px
                   border: 2px solid transparent
-                  font:
-                     size: 18px
                      
                   &:hover, &.active
                      color: #fff
                      border: 2px solid white
                      background-color: #14557a
                      
-               @media (max-width: 650px)
-                  .home, .gallery,
+               @media (max-width: 500px)
+                  > a
+                     font-size: 1.05rem
+                     
+                  .gallery
                      +display(none)
                   
             .nav-mobile
                +display(none)
+                  
+            @media screen and (max-width: 768px)
+               +display(block)
+               
+               .nav-logo
+                  margin: 8px auto 15px
+               
+               .nav-main
+                  +justify-content(center)
+                  
+                  .home
+                     +display(none)
+                        
+                  > a
+                     +position(relative)
+                     margin: 0 6px
+                     border: 0
+                     
+                     &:before
+                        content: ""
+                        z-index: 1
+                        width: 12px
+                        +position(absolute, 0 null 0 -5px)
+                        +transform(skewX(-17eg))
+                     
+                     &:after
+                        content: ""
+                        z-index: 1
+                        width: 12px
+                        +position(absolute, 0 -5px 0 null)
+                        +transform(skewX(-17deg))
+                     
+                     &:hover, &.active
+                        border: 0
+                        
+                        &:before
+                           +transform(skewX(-17deg))
+                           background-color: $body-alt
+                           
+                        &:after
+                           +transform(skewX(-17deg))
+                           background-color: $body-alt
 
+                  .order
+                     &:hover, &.active
+                        &:before
+                           +transform(skewX(0deg))
+                           
+                  .contact
+                     &:hover, &.active
+                        &:after
+                           +transform(skewX(0deg))
+                     
+                     
+                           

@@ -1,30 +1,27 @@
-.breadcrumbs-content
+.breadcrumb-content
    color: #fff
    
-   h1
-      font-size: 1.5rem
+   .breadcrumb-title
+      margin-bottom: 5px
       
    p
-      font-size: .9rem
       margin: 0
 
 .site-content
    border-top: 1px solid $border-color
-   border-bottom: 1px solid $border-color
-      background-color: $body-alt
-      
-   .section-main
-      border-top: 1px solid $border-color
-      border-bottom: 1px solid $border-color
+   border-bottom: 1px solid $border-color      
    
    .section-alt
       color: white
       background-color: $body-alt
       
-   .section-alt-bottom
+   .alt-bottom
+      color: $site-color
       background-color: $body-alt-bottom
                         
    > *
+      border-top: 1px solid $border-color
+   
       .post-flexrow
          margin: 0 auto
          +display(flex)
@@ -41,21 +38,16 @@
             border-radius: 2px
             margin: 4px 8px 14px 8px
             box-shadow: 0 0 4px rgba(#e2e2e2, .7)
-            
-            @media (max-width: 768px)
-               width: 130px
-
+               
             .post-text
                color: $site-color
                padding: 3px 8px
 
                h4
                   color: #551a8b
-
-               p
-                  font-size: .8rem
                         
-   .slider      
+   .alt-top
+      border-top: 0px   
       
       @media (max-width: 650px)
          +display(none)
@@ -68,18 +60,16 @@
             padding: 20px 30px
             +flex(0 1 524px)      
             color: white
+            font-family: $slide-fontfam
             
-            > *
-               font-family: $slide-fontfam   
-            
-            h1
-               font-size: 4rem
+            .slide-title
                margin-bottom: 3rem
+            
                
-            p
+            .slide-blur h3
                padding-left: 1px
-               font-size: 20px
-               margin-bottom: 40px
+               line-height: 1.2
+               margin-bottom: 2rem
                
                &:last-of-type
                   margin-bottom: 0
