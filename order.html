@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Order
-breadcrumbs: true
+breadcrumb: true
 changefreq: weekly
 ---
 
@@ -10,8 +10,8 @@ changefreq: weekly
       <div class="page-main">
             
          <header class="page-header">
-            <h1 class="bluff">Buy all in one go!!</h1>
-            <p class="sub-bluff">You can save up to 50% if you buy in bundle.</p>
+            <h3 class="page-title">Buy all in one go!!</h3>
+            <p class="page-blurb">You can save up to 50% if you buy in bundle.</p>
          </header>
 
          <table cellspacing="0" class="book-package-list">
@@ -22,17 +22,17 @@ changefreq: weekly
                <th class="header-price">Price</th>
                <th class="header-save">Save</th>
                <th></th>
-               <th class="header-add-to-cart">Add<br>to<br>Cart</th>
+               <th class="header-add-to-cart smallest">Add<br>to<br>Cart</th>
             </tr>
             {% for package in site.pages %}
             {% if package.bookname %}
             <tr>
                <td class="item-book-name">{{package.bookname}}</td>
                <td class="item-book-author">{{package.bookauthor}}</td>
-               <td class="item-see-all"><a href="{{site.baseurl}}/order/book/{{package.folder}}/">see all books of {{package.bookauthor}}</a></td>
+               <td class="item-see-details"><a class="see-all small" href="{{site.baseurl}}/order/book/{{package.folder}}/">see all books of {{package.bookauthor}}</a><a class="see-more small" href="{{site.baseurl}}/order/book/{{package.folder}}/">see details</a></td>
                <td class="item-price">{{package.price}}</td>
                <td class="item-save">{{package.save}}</td>
-               <td class="item-buy"><a href="#">Buy Package</a></td>
+               <td class="item-buy"><a class="buy-package" href="#">Buy Package</a><a class="buy" href="#">Buy</a></class></td>
                <td class="item-add-to-cart">
                   <form method="get">
                      <input type="checkbox" value="{{package.bookname}}">

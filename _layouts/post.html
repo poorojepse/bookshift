@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div class="section-breadcrumbs">
+<div class="section-breadcrumb">
    <div class="container">
-      <div class="breadcrumbs-content">
+      <div class="breadcrumb-content">
          {% for info in site.data.content-info %}
             {% if info.book == page.title %}
-               <h1>{{info.book}}</h1>
+               <h3 class="breadcrumb-title">{{info.book}}</h3>
                {{info.content | markdownify}}
             {% endif %}
          {% endfor %}
@@ -19,17 +19,20 @@ layout: default
    <div class="page-container">
       
       <div class="post-header">
-         <h1 class="post-bluff">{{page.title}}:
-            {% if page.subtitle %}
-               {{page.subtitle}}
-            {% elsif page.chapter %}
-               {{page.chapter}}
-            {% else %}
-               {{page.volume}}
-            {% endif %}
-         </h1>
+         <div class="post-text">
+            <h2 class="post-title">{{page.title}}:</h2>
+            <h2 class="post-blurb">
+               {% if page.subtitle %}
+                  {{page.subtitle}}
+               {% elsif page.chapter %}
+                  {{page.chapter}}
+               {% else %}
+                  {{page.volume}}
+               {% endif %}
+            </h2>
+         </div>
          <div class="post-seelist">
-            <a class="post-seelist" href="{{site.baseurl}}/order/book/{{page.folder}}">See all lists by {{page.author}}</a>
+            <a class="post-seelist" href="{{site.baseurl}}/order/book/{{page.folder}}">See all books by {{page.author}}</a>
          </div>
       </div>
       
@@ -39,92 +42,99 @@ layout: default
                <img class="img-responsive" src="{{site.baseurl}}/assets/img/{{page.folder}}/{{page.image}}.jpg" alt="Photo of {{page.image}}">
             </div>
 
-            <dl class="post-desc post-item">
-               <h2>Product Detail</h2>
-               <dt>Title:</dt><dd>{{page.title}}</dd>
+            <div class="post-desc post-item">
+               <dl class="desc">
+                  <h3>Product Detail</h3>
+                  <dt>Title:</dt><dd>{{page.title}}</dd>
 
-               {% if page.chapter %}
-               <dt>Chapter:</dt><dd>{{page.chapter}}</dd>
-               {% endif %}
+                  {% if page.chapter %}
+                  <dt>Chapter:</dt><dd>{{page.chapter}}</dd>
+                  {% endif %}
 
-               {% if page.subtitle %}
-               <dt>Sub-title:</dt><dd>{{page.subtitle}}{% if page.subsubtitle %} - {{page.subsubtitle}}{% endif %}</dd>
-               {% endif %}
+                  {% if page.subtitle %}
+                  <dt>Sub-title:</dt><dd>{{page.subtitle}}{% if page.subsubtitle %} - {{page.subsubtitle}}{% endif %}</dd>
+                  {% endif %}
 
-               <dt>Author:</dt><dd>{{page.author}}</dd>
+                  <dt>Author:</dt><dd>{{page.author}}</dd>
 
-               {% if page.artist %}
-               <dt>Artist:</dt><dd>{{page.artist}}</dd>
-               {% endif %}
+                  {% if page.artist %}
+                  <dt>Artist:</dt><dd>{{page.artist}}</dd>
+                  {% endif %}
 
-               {% if page.illustrator %}
-               <dt>Illustrator:</dt><dd>{{page.illustrator}}</dd>
-               {% endif %}
+                  {% if page.illustrator %}
+                  <dt>Illustrator:</dt><dd>{{page.illustrator}}</dd>
+                  {% endif %}
 
-               <dt>Language:</dt><dd>{{page.language}}</dd>
-               <dt>Hardcover:</dt><dd>{{page.hardcover}}</dd>
-               <dt>Color:</dt><dd>{{page.color}}</dd>
-               <dt>Product Dimension:</dt><dd>{{page.pdimension}}</dd>
+                  <dt>Language:</dt><dd>{{page.language}}</dd>
+                  <dt>Hardcover:</dt><dd>{{page.hardcover}}</dd>
+                  <dt>Color:</dt><dd>{{page.color}}</dd>
+                  <dt>Product Dimension:</dt><dd>{{page.pdimension}}</dd>
 
-               {% if page.publisher %}
-               <dt>Publisher:</dt><dd>{{page.publisher}}</dd>
-               {% endif %}
+                  {% if page.publisher %}
+                  <dt>Publisher:</dt><dd>{{page.publisher}}</dd>
+                  {% endif %}
 
-               {% if page.publication %}
-               <dt>Publication Data:</dt><dd>{{page.publication}}</dd>
-               {% endif %}
+                  {% if page.publication %}
+                  <dt>Publication Data:</dt><dd>{{page.publication}}</dd>
+                  {% endif %}
 
-               {% if page.soldby %}
-               <dt>Sold by:</dt><dd>{{page.soldby}}</dd>
-               {% endif %}
+                  {% if page.soldby %}
+                  <dt>Sold by:</dt><dd>{{page.soldby}}</dd>
+                  {% endif %}
 
-               <dt>Weight:</dt><dd>{{page.weight}}</dd>
-               <dt>ISBN #:</dt><dd>{{page.isbn-13}}</dd>
-            </dl>
+                  <dt>Weight:</dt><dd>{{page.weight}}</dd>
+                  <dt>ISBN #:</dt><dd>{{page.isbn-13}}</dd>
+               </dl>
+            </div>
 
             <div class="post-purchase post-item">
-               <div class="purchase-top">
-                  <h2 class="price">$10.00</h2>
-                  <div class="quantity">
-                     <label for="quantity" class="a-native-dropdown">Qty:</label>
-                     <select name="quantity" autocomplete="off" id="quantity" tabindex="-1" class="a-native-dropdown">
-                        <option value="1" selected="">1
-                        </option>
-                        {% for i in (2..30) %}
-                           <option value="i">{{i}}
-                           </option>   
-                        {% endfor %}
-                     </select>
+               <div class="purchase">
+                  <div class="purchase-top">
+                     <div class="price">
+                        <h4>$10.00</h4>
+                     </div>
+                     <div class="quantity">
+                        <label for="quantity" class="a-native-dropdown">Qty:</label>
+                        <select name="quantity" autocomplete="off" id="quantity" tabindex="-1" class="a-native-dropdown">
+                           <option value="1" selected="">1
+                           </option>
+                           {% for i in (2..30) %}
+                              <option value="i">{{i}}
+                              </option>   
+                           {% endfor %}
+                        </select>
+                     </div>
                   </div>
-               </div>
 
-               <p class="shipping"><span class="blue">FREE SHIPPING</span> on order with at least $25 of books.</p>
+                  <p class="shipping"><span class="blue">FREE SHIPPING</span> on order with at least $25 of books.</p>
 
-               <p class="stock"><span class="red">In Stock</span><br> Ships from and sold by Amazon.com. Gift-wrap available</p>
+                  <p class="stock"><span class="red">In Stock</span><br> Ships from and sold by Amazon.com. Gift-wrap available</p>
 
-               <div class="addtocart">
-                  <a href="#"><img class="img-responsive" src="{{site.baseurl}}/assets/img/addtocart.png"></a>
+                  <div class="addtocart">
+                     <a href="#"><img class="img-responsive" src="{{site.baseurl}}/assets/img/addtocart.png"></a>
+                  </div>
                </div>
             </div>
 
-            <div class="content-summary post-item">
+            <div class="post-summary post-item">
                <div class="summary">
-                  <h2>Summary</h2>
-                  {{page.content}}
+                  <h3>Summary</h3>
+                  <span>{{page.content}}</span>
                </div>
             </div>
          </div>
 
          <div class="post-sidebar">
             <div class="sidebar">               
-               {% if page.subtitle %}
-                  <h2>Related Books</h2>
-               {% elsif page.chapter %}
-                  <h2>Chapter List</h2>
-               {% else %}
-                  <h2>Volume List</h2>
-               {% endif %}
-               
+               <strong class="sidebar-title">
+                  {% if page.subtitle %}
+                     Related Books
+                  {% elsif page.chapter %}
+                     Chapter List
+                  {% else %}
+                     Volume List
+                  {% endif %}
+               </strong>
                {% include related-list.html title=page.title %}      
             </div>
          </div>
