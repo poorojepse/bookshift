@@ -131,6 +131,29 @@ img
       
       
       
+      
+      
+.embed-container
+   +display(block)
+   +position(relative)
+   height: 0
+   overflow: hidden
+   
+   img
+      +position(absolute, 0 null null 0)
+      width: 100%
+   
+.ratio-6-4
+   padding-bottom: $ratio-6-4
+   
+.ratio-11-8
+   padding-bottom: $ratio-11-8
+   
+.ratio-4-18
+   padding-bottom: $ratio-4-18
+
+      
+      
 
    
 .page-container
@@ -181,12 +204,6 @@ img
       
 .main-flexitem
    +flex(1 1 100%)      
-   
-.img-responsive
-   +size(100% auto)
-   +display(block)
-   margin: 0 auto
-   padding-bottom: 1rem
    
 .max800
    max-width: 800px

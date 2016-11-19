@@ -2,8 +2,8 @@
    {% if page.title == include.title %}
    <div class="post-flexitem">
       <a href="{{site.baseurl}}{{page.url}}">                  
-         <div class="post-img">
-            <img class="img-responsive" src="{{site.baseurl}}/assets/img/{{page.folder}}/{{page.image}}.jpg" alt="Photo of {{page.title}}: {{page.subtitle}}">
+         <div class="embed-container ratio-6-4">
+            <img src="{{site.baseurl}}/assets/img/{{page.folder}}/{{page.image}}.jpg" alt="Photo of {{page.title}}: {{page.subtitle}}">
          </div>
       </a>
       <div class="post-text">
