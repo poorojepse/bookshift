@@ -1,0 +1,49 @@
+.support-form
+   margin: 0 45px
+
+   form
+
+      .form-text
+         input
+            width: 250px
+
+      p
+         margin-bottom: 5px
+
+      input
+         padding: 3px 5px
+         margin-bottom: 2rem
+
+      textarea
+         margin-bottom: 5px
+         resize: none
+         color: $site-color
+         font-family: $site-font
+         padding: 7px
+         +size(100% 13em)
+
+      [type="submit"]
+         width: 100px
+         background-color: $body-alt-bottom
+         color: $site-color
+         line-height: 2.4
+         cursor: pointer
+         text-transform: uppercase
+         letter-spacing: 1.5px
+         border: 1px solid $border-color
+         font:
+            weight: 600
+
+         &:hover
+            background-color: $header-color
+
+   @media (max-width: 650px)
+      margin: 0
+      padding: 20px 0
+
+   @media (max-width: 400px)
+
+      form
+         .form-text
+            input
+               width: 100%

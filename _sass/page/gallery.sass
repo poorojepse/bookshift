@@ -1,0 +1,26 @@
+.gallery-flexrow
+   +display(flex)
+   +justify-content(center)
+   +flex-wrap(wrap)
+
+   .gallery-flexitem
+      width: 280px
+      padding: 6px
+      margin: 10px
+      border: 1px solid $border-color
+      border-radius: 2px
+      box-shadow: 0 0 4px rgba(#e2e2e2, .7)
+
+      a
+         color: $site-color
+
+      .gallery-flexitem-img
+         box-shadow: 0 0 1px 0px rgba(black, .2)
+         padding: 0
+
+      .gallery-flexitem-name
+         margin-top: 1rem
+
+      .gallery-flexitem-desc
+         +display(block)
+         margin-bottom: 5px
