@@ -17,7 +17,7 @@
       +display(block)
 
       &:hover
-         color: $header-color
+         color: $btn-purchase
          
    @media (max-width: 650px)
       +display(block)
@@ -35,6 +35,8 @@
          margin: 0 auto
          padding: 6px 10px
          max-width: 260px
+         
+         
 
 .post-mainX
    z-index: 1
@@ -73,7 +75,7 @@
          padding: 15px
          border: 1px solid rgba(darken($border-color, 28), 1)
          background-color: $body-alt-bottom
-         box-shadow: inset 0 0 40px rgba(darken($body-alt-bottom, 45), .5)
+         box-shadow: inset 0 0 40px rgba(darken($body-alt-bottom, 45), .4)
          border-radius: 4px 
          
          &:before
@@ -118,7 +120,7 @@
             box-shadow: inset 0 0 20px rgba($body-alt, .5)
          
          p
-            color: $body-alt
+            color: darken($body-alt, 10)
             font-size: 1.30rem
             margin: 0 4px 0 0
                      
@@ -126,10 +128,16 @@
             +size(40px)
 
             path, circle
-               fill: $body-alt      
+               fill: darken($body-alt, 10)
                
          &:hover
             background-color: darken($btn-purchase, 10)
+            
+            p
+               color: darken($body-alt, 20)
+            
+            path, circle
+               fill: darken($body-alt, 20)
             
             &:before
                box-shadow: inset 0 0 20px rgba($body-alt, .4)
@@ -144,61 +152,22 @@
       span
          background-color: rgba(white, .7)
          line-height: 0
+         
+         
 
 .post-sidebar
    z-index: 1
-   +flex-grow(1)
-   margin: 0 5px 0 20px 
+   width: 190px
    
    @media (max-width: 1200px)
       +display(none)
 
    .sidebar 
-      max-height: 800px
-      padding: 0 0 5px 5px
-      border-left: 1px solid $border-color
-
-      > *
-         margin: 0         
-         padding: 5px 0 3px 10px
-
-      .sidebar-title
-         
-         +display(block)
-         background-color: $body-alt-bottom
-         text-transform: uppercase
-         
-         border:
-            width: 0 0 1px 1px
-            style: solid
-            color: $border-color
-
-      ul
-         list-style-type: none
-         border:
-            width: 0 0 0 1px
-            style: solid
-            color: $border-color
-
-         li
-            margin-top: 3px
-            +position(relative)
-
-            &:before
-               content: ""
-               +position(absolute, 50% null null -10px)
-               +size(5px 1px)
-               background-color: $border-color
-
-            a
-               padding: 2px 5px
-               border-radius: 2px
-               background-color: rgba($body-color, .7)
-               color: $site-color
-
-               &:hover
-                  background-color: $body-alt-bottom
-
+      max-height: 700px
+      overflow-x: hidden 
+      
+      
+      
 .post-bg
    z-index: 0
    +position(absolute, null 0 0 null)

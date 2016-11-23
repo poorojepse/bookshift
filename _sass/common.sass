@@ -113,101 +113,27 @@ img
    background-color: $page-color
    
 .container
-   padding: 15px 0
-   margin: 0 auto
-   +position(relative)
-      
-   @media (min-width: 768px)
-      width: 738px
-      
-   @media (max-width: 768px)
-      padding: 15px 14px
-   
-   @media (min-width: 992px)
-      width: 963px
-      
-   @media (min-width: 1200px)
-      width: 1170px
-      
-      
-      
-      
-      
-.embed-container
-   +display(block)
-   +position(relative)
-   height: 0
-   overflow: hidden
-   
-   img
-      +position(absolute, 0 null null 0)
-      width: 100%
-   
-.ratio-6-4
-   padding-bottom: $ratio-6-4
-   
-.ratio-11-8
-   padding-bottom: $ratio-11-8
-   
-.ratio-4-18
-   padding-bottom: $ratio-4-18
-
-      
-      
-
+   @extend %container
    
 .page-container
-   +position(relative)
-   background-color: $body-color
-   margin: 0 auto
-   padding: 65px 40px
+   @extend %page-container    
    
-   &:before
-      content: ""
-      +position(absolute, 0 null 0 -50px)
-      +size(50px 100%)
-      +transform(rotate(180deg))
-      background:
-         color: transparent
-         image: url('../img/main-shadow.png')
-         repeat: repeat-y
-         
-   &:after
-      content: ""
-      +position(absolute, 0 -50px 0 null)
-      +size(50px 100%)
-      background:
-         color: transparent
-         image: url('../img/main-shadow.png')
-         repeat: repeat-y        
+.main-sidebar
+   @extend %main-sidebar 
       
-   @media (min-width: 768px)
-      width: 638px
-      
-   @media (max-width: 768px)
-      padding: 30px
-      
-      &:before, &:after
-         +display(none)
-   
-   @media (min-width: 992px)
-      width: 863px
-      
-   @media (min-width: 1200px)
-      width: 1070px
-      
+.embed-container
+   @extend %img-noreflow   
       
 .btn-purchase
    background-color: $btn-purchase
-
       
 .support-flexrow
    +display(flex)
    +flex-wrap(nowrap)
       
 .main-flexitem
-   +flex(1 1 100%)      
-   
+   +flex(1 1 100%)         
+      
 .max800
    max-width: 800px
    margin: 0 auto
@@ -223,10 +149,7 @@ img
    padding-top: 2rem
    
 .pad-bottom
-   padding-bottom: 20px
-   
-   
-   
+   padding-bottom: 20px 
    
 .unpad-vert
    padding-top: 0
@@ -237,8 +160,6 @@ img
    
 .unpad-bottom
    padding-bottom: 0px
-   
-   
    
 .red
    color: #fe1111

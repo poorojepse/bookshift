@@ -1,0 +1,132 @@
+%container
+   padding: 15px 0
+   margin: 0 auto
+   +position(relative)
+      
+   @media (min-width: 768px)
+      width: 738px
+      
+   @media (max-width: 768px)
+      padding: 15px 14px
+   
+   @media (min-width: 992px)
+      width: 963px
+      
+   @media (min-width: 1200px)
+      width: 1170px  
+
+      
+      
+%page-container
+   +position(relative)
+   background-color: $body-color
+   margin: 0 auto
+   padding: 65px 40px
+   
+   &:before
+      content: ""
+      +position(absolute, 0 null 0 -50px)
+      +size(50px 100%)
+      +transform(rotate(180deg))
+      background:
+         color: transparent
+         image: url('../img/main-shadow.png')
+         repeat: repeat-y
+         
+   &:after
+      content: ""
+      +position(absolute, 0 -50px 0 null)
+      +size(50px 100%)
+      background:
+         color: transparent
+         image: url('../img/main-shadow.png')
+         repeat: repeat-y        
+      
+   @media (min-width: 768px)
+      width: 638px
+      
+   @media (max-width: 768px)
+      padding: 30px
+      
+      &:before, &:after
+         +display(none)
+   
+   @media (min-width: 992px)
+      width: 863px
+      
+   @media (min-width: 1200px)
+      width: 1070px
+
+      
+      
+%img-noreflow
+   +display(block)
+   +position(relative)
+   height: 0
+   overflow: hidden
+   
+   img
+      +position(absolute, 0 null null 0)
+      width: 100%
+   
+   &.ratio-6-4
+      padding-bottom: $ratio-6-4
+
+   &.ratio-11-8
+      padding-bottom: $ratio-11-8
+
+   &.ratio-4-18
+      padding-bottom: $ratio-4-18
+      
+
+
+%main-sidebar
+   margin: 0 5px 0 20px
+   
+   .sidebar
+      padding: 0 0 5px 5px
+      border-left: 1px solid rgba(darken($border-color, 28), .8)
+
+      > *
+         margin: 0         
+         padding: 5px 0 3px 10px
+         border-color: rgba(darken($border-color, 28), .8)
+         border-style: solid
+
+      .sidebar-title         
+         +display(block)
+         background-color: $body-alt-bottom
+         box-shadow: inset 0 0 10px rgba(darken($body-alt-bottom, 45), .5)
+         text-transform: uppercase         
+         border-width: 1px
+
+      ul
+         list-style-type: none
+         border-width: 0 0 0 1px
+         
+         li
+            +position(relative)
+            margin-top: 3px
+            border-style: solid
+            border-color: transparent
+            border-width: 0 1px
+
+            &:before
+               content: ""
+               +position(absolute, 50% null null -10px)
+               +size(5px 1px)
+               background-color: rgba(darken($border-color, 28), .8)
+            
+            a
+               +display(block)
+               background-color: rgba($body-color, .7)
+               color: $site-color
+               
+               span
+                  padding: 0 5px
+                  border-radius: 3px
+               
+               &:hover span
+                  +display(inline-block)
+                  background-color: $body-alt-bottom
+                  box-shadow: inset 0 0 10px rgba(darken($body-alt-bottom, 45), .6)

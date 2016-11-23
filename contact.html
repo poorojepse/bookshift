@@ -32,7 +32,7 @@ changefreq: weekly
             <div class="socials">
                {% for social in site.data.settings.socials %}
                   <a class="social-link" href="{{social.link}}" target="_blank">
-                     <img class="social-img" src="{{site.baseurl}}/assets/img/social/{{social.icon}}.svg" alt="{{social.icon}}">
+                     {% include icons/{{social.icon}}.html %}
                   </a>   
                {% endfor %}
             </div>

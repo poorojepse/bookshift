@@ -16,63 +16,33 @@
          margin-bottom: 2rem
          
    .page-footer
-      .tips
+      text-align: center
       
+      @media (min-width: 500px)
+         text-align: left     
          
          
 .page-sidebar
    +flex(1 0 270px)
-   margin-left: 20px
    
    @media (max-width: 992px)
       +display(none)
 
-   .sidebar 
-      overflow-y: hidden
-      padding: 5px
-      border-left: 1px solid $border-color
+   .sidebar ul
+      padding-bottom: 50px
 
-      > *
-         margin: 0         
-         padding: 5px 0 3px 10px
+      &:last-of-type
+         padding-bottom: 5px
 
-      .sidebar-title
-         +display(block)
-         background-color: $body-alt-bottom
-         text-transform: uppercase
-         
-         border:
-            width: 0 0 1px 1px
-            style: solid
-            color: $border-color
+      li
+         padding: 0 3px
 
-      ul
-         list-style-type: none
-         padding-bottom: 50px
-         border:
-            width: 0 0 0 1px
-            style: solid
-            color: $border-color
-            
-         &:last-of-type
-            padding-bottom: 5px
+         &:hover
+            border-color: rgba($border-color, .9)
 
-         li
-            margin-top: 3px
-            +position(relative)
+         a
+            +display(inline)
 
-            &:before
-               content: ""
-               +position(absolute, 50% null null -10px)
-               +size(5px 1px)
-               background-color: $border-color
-
-            a
-               padding: 2px 5px
-               border-radius: 2px
-               background-color: rgba($body-color, .7)
-               color: $site-color
-
-               &:hover
-                  background-color: $body-alt-bottom
+            &:hover
+               text-decoration: underline
                
