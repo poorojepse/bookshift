@@ -1,7 +1,12 @@
 $(function () {
    owlCarousel();
+   workLoad();
 });
 
+
+function workLoad() {
+   $.ajaxSetup({ cache: true });   
+}
 
 function owlCarousel() {
   $("#slider").owlCarousel({ 
