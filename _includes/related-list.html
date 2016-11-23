@@ -4,13 +4,15 @@
 
       <li>
          <a href="{{site.baseurl}}{{page.url}}">
-            {% if page.subtitle %}
-               {{page.subtitle}}
-            {% elsif page.chapter %}
-               {{page.chapter}}
-            {% else %}
-               {{page.volume}}
-            {% endif %}                              
+            <span>
+               {% if page.subtitle %}
+                  {{page.subtitle}}
+               {% elsif page.chapter %}
+                  {{page.chapter}}
+               {% else %}
+                  {{page.volume}}
+               {% endif %}
+            </span>
          </a>
       </li>
    

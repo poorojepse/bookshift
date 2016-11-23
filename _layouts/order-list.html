@@ -11,8 +11,11 @@ layout: default
          </header>
       
          <section class="book-package">
+            <div class="book-img embed-container ratio-6-4">
+               <img src="{{site.baseurl}}/assets/img/{{page.folder}}/{{page.bookcover}}.jpg" alt="Photo of {{page.bookname}}">
+            </div>
             <h4 class="book-title">{{page.bookname}}: {{page.bookauthor}}</h4>
-            <a class="book-buy">20 Books + Accessories = {{page.price}}</a>
+            <a class="book-purchase">20 Books + Accessories = {{page.price}}</a>
          </section>
          
          <table cellspacing="0" class="book-item-list">
